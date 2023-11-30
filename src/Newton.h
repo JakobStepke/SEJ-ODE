@@ -15,15 +15,23 @@ namespace ASC_ode
 
     for (int i = 0; i < maxsteps; i++)
       {
+        cout << "Newton step " << i << endl;
         func->Evaluate(x, res);
+        cout << "res = " << endl << res << endl;
         // cout << "|res| = " << L2Norm(res) << endl;
         func->EvaluateDeriv(x, fprime);
-        CalcInverse(fprime);
+        cout << "fprime = " << endl << fprime << endl;
+        cout << "fprime^-1 = " << endl << Matrix(InverseLapack(fprime)) << endl;
+        cout << "fprime^-1*fprime = " << endl << Matrix(Matrix(fprime*InverseLapack(fprime))) << endl;
+        fprime = Matrix(InverseLapack(fprime));
         x -= fprime*res;
 
-        double err= L2Norm(res);
+        double err= res.Norm2();
         if (callback)
           callback(i, err, x);
+
+        cout << "err = " << err << endl;
+
         if (err < tol) return;
       }
 

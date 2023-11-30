@@ -5,22 +5,24 @@ set (CMAKE_CXX_STANDARD 17)
 
 
 # use linalg from NGSolve, otherwise comment it out
-find_package(NGSolve CONFIG REQUIRED
-  HINTS /usr $ENV{NETGENDIR}/.. /tmp/inst/usr /opt/netgen/ /Applications/Netgen.app/Contents/Resources/CMake C:/netgen
-)
+#find_package(NGSolve CONFIG REQUIRED
+# HINTS /usr $ENV{NETGENDIR}/.. /tmp/inst/usr /opt/netgen/ /Applications/Netgen.app/Contents/Resources/CMake C:/netgen
+#)
 
 
 include_directories(src)
+include_directories(ESJ-bla/src)
 add_subdirectory (src)
 
 add_executable (test_ode demos/test_ode.cc)
-target_link_libraries (test_ode PUBLIC ngbla)
+find_package(LAPACK REQUIRED)
+target_link_libraries (test_ode PUBLIC ${LAPACK_LIBRARIES})
 
-add_executable (test_newmark demos/test_newmark.cc)
-target_link_libraries (test_newmark PUBLIC ngbla)
+#add_executable (test_newmark demos/test_newmark.cc)
+#target_link_libraries (test_newmark PUBLIC ngbla)
 
-add_executable (test_alpha demos/test_alpha.cc)
-target_link_libraries (test_alpha PUBLIC ngbla)
+#add_executable (test_alpha demos/test_alpha.cc)
+#target_link_libraries (test_alpha PUBLIC ngbla)
 
 
-add_subdirectory (mass_spring)
+#add_subdirectory (mass_spring)

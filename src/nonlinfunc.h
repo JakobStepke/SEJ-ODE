@@ -1,13 +1,15 @@
 #ifndef NONLINFUNC_H
 #define NONLINFUNC_H
 
-#include <vector.hpp>
-#include <matrix.hpp>
+#include <vector.h>
+#include <matrix.h>
+#include <lapack_interface.h>
 
+using namespace std;
 
 namespace ASC_ode
 {
-  using namespace ngbla;
+  using namespace ASC_bla;
 
   class NonlinearFunction
   {
@@ -80,7 +82,7 @@ namespace ASC_ode
       f *= faca;
       Vector<> tmp(DimF());
       fb->Evaluate(x, tmp);
-      f += facb*tmp;
+      f += Vector(facb*tmp);
     }
     void EvaluateDeriv (VectorView<double> x, MatrixView<double> df) const override
     {
@@ -88,7 +90,7 @@ namespace ASC_ode
       Matrix<> tmp(DimF(), DimX());
       tmp *= faca;
       fb->EvaluateDeriv(x, tmp);
-      df += facb*tmp;
+      df += tmp * facb;
     }
   };
 

@@ -2,6 +2,7 @@
 #include <ode.h>
 
 using namespace ASC_ode;
+using namespace std;
 
 
 class MassSpring : public NonlinearFunction
@@ -17,7 +18,8 @@ class MassSpring : public NonlinearFunction
   
   void EvaluateDeriv (VectorView<double> x, MatrixView<double> df) const override
   {
-    df = 0.0;
+    cout << "EvaluateDeriv" << endl;
+    df *= 0.0;
     df(0,1) = 1;
     df(1,0) = -1;
   }
@@ -28,8 +30,11 @@ int main()
 {
   double tend = 4*M_PI;
   int steps = 100;
+  cout << "tend = " << tend << ", steps = " << steps << endl;
   Vector<> y { 1, 0 };
+  cout << "y = " << y << endl;
   auto rhs = make_shared<MassSpring>();
+  cout << "rhs = " << rhs << endl;
   
   SolveODE_IE(tend, steps, y, rhs,
               [](double t, VectorView<double> y) { cout << t << "  " << y(0) << " " << y(1) << endl; });

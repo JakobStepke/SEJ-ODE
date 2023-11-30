@@ -3,7 +3,6 @@
 
 #include <functional>
 #include <exception>
-#include <calcinverse.hpp>
 
 #include "Newton.h"
 
@@ -20,6 +19,8 @@ namespace ASC_ode
     auto yold = make_shared<ConstantFunction>(y);
     auto ynew = make_shared<IdentityFunction>(y.Size());
     auto equ = ynew-yold - dt * rhs;
+
+    cout << "Start IE" << endl;
 
     double t = 0;
     for (int i = 0; i < steps; i++)
