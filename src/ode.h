@@ -25,11 +25,13 @@ namespace ASC_ode
     double t = 0;
     for (int i = 0; i < steps; i++)
       {
+        cout << "IE step " << i << endl;
         NewtonSolver (equ, y);
         yold->Set(y);
         t += dt;
         if (callback) callback(t, y);
       }
+      cout << "End IE" << endl;
   }
 
   

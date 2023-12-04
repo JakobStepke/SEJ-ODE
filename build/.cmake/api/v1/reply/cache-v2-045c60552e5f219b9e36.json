@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build"
+			"value" : "/mnt/c/Users/e12209452/Documents/Uni/ScientificComputing/SEJ-ODE/build"
 		},
 		{
 			"name" : "ASC_ode_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE"
+			"value" : "/mnt/c/Users/e12209452/Documents/Uni/ScientificComputing/SEJ-ODE"
 		},
 		{
 			"name" : "BLAS_WORKS",
@@ -259,7 +259,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build"
+			"value" : "/mnt/c/Users/e12209452/Documents/Uni/ScientificComputing/SEJ-ODE/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -283,7 +283,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "27"
+			"value" : "22"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -295,7 +295,23 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "7"
+			"value" : "1"
+		},
+		{
+			"name" : "CMAKE_COLOR_MAKEFILE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable/Disable color output during build."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -363,7 +379,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-13"
+			"value" : "/usr/bin/gcc-ar-11"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -379,7 +395,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-13"
+			"value" : "/usr/bin/gcc-ranlib-11"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -491,7 +507,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-13"
+			"value" : "/usr/bin/gcc-ar-11"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -507,7 +523,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-13"
+			"value" : "/usr/bin/gcc-ranlib-11"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -722,18 +738,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_FIND_PACKAGE_REDIRECTS_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake."
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/CMakeFiles/pkgRedirects"
-		},
-		{
 			"name" : "CMAKE_GENERATOR",
 			"properties" : 
 			[
@@ -743,7 +747,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Ninja"
+			"value" : "Unix Makefiles"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -794,6 +798,18 @@
 			"value" : "1"
 		},
 		{
+			"name" : "CMAKE_HAVE_PTHREAD_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include pthread.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
 			"name" : "CMAKE_HOME_DIRECTORY",
 			"properties" : 
 			[
@@ -803,7 +819,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE"
+			"value" : "/mnt/c/Users/e12209452/Documents/Uni/ScientificComputing/SEJ-ODE"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -855,11 +871,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Program used to build from build.ninja files."
+					"value" : "Path to a program."
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ninja"
+			"value" : "/usr/bin/gmake"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1091,7 +1107,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/share/cmake-3.27"
+			"value" : "/usr/share/cmake-3.22"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1302,22 +1318,6 @@
 			"value" : "/usr/bin/strip"
 		},
 		{
-			"name" : "CMAKE_TAPI",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a program."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "CMAKE_TAPI-NOTFOUND"
-		},
-		{
 			"name" : "CMAKE_UNAME",
 			"properties" : 
 			[
@@ -1370,18 +1370,6 @@
 			"value" : "[/usr/lib/x86_64-linux-gnu/libopenblas.so;-lm;-ldl][v()]"
 		},
 		{
-			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Python",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Details about finding Python"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "[/usr/bin/python3][/usr/include/python3.10][/usr/lib/x86_64-linux-gnu/libpython3.10.so][cfound components: Interpreter Development Development.Module Development.Embed ][v3.10.8(3.8)]"
-		},
-		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
 			"properties" : 
 			[
@@ -1394,18 +1382,6 @@
 			"value" : "[TRUE][v()]"
 		},
 		{
-			"name" : "HAS_FLTO",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Test HAS_FLTO"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "1"
-		},
-		{
 			"name" : "LAPACK_WORKS",
 			"properties" : 
 			[
@@ -1416,222 +1392,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "1"
-		},
-		{
-			"name" : "NGSolve_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for NGSolve."
-				}
-			],
-			"type" : "PATH",
-			"value" : "NGSolve_DIR-NOTFOUND"
-		},
-		{
-			"name" : "PYBIND11_PYTHON_EXECUTABLE_LAST",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Python executable during the last CMake run"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "/usr/bin/python3"
-		},
-		{
-			"name" : "PYTHON_IS_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Python debug status"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "0"
-		},
-		{
-			"name" : "PYTHON_MODULE_EXTENSION",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ".cpython-310-x86_64-linux-gnu.so"
-		},
-		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
-			"name" : "_Python",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "Python"
-		},
-		{
-			"name" : "_Python_Compiler_REASON_FAILURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Compiler reason failure"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ""
-		},
-		{
-			"name" : "_Python_DEVELOPMENT_EMBED_SIGNATURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "1753ea98497ad1c9a3dd111e679dcb36"
-		},
-		{
-			"name" : "_Python_DEVELOPMENT_MODULE_SIGNATURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "418640b2d469127f9ac7b81185afa67d"
-		},
-		{
-			"name" : "_Python_Development_REASON_FAILURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Development reason failure"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ""
-		},
-		{
-			"name" : "_Python_EXECUTABLE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a program."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "/usr/bin/python3"
-		},
-		{
-			"name" : "_Python_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a file."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "/usr/include/python3.10"
-		},
-		{
-			"name" : "_Python_INTERPRETER_PROPERTIES",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Python Properties"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "Python;3;10;8;64;;cpython-310-x86_64-linux-gnu;abi3;/usr/lib/python3.10;/usr/lib/python3.10;/usr/local/lib/python3.10/dist-packages;/usr/local/lib/python3.10/dist-packages"
-		},
-		{
-			"name" : "_Python_INTERPRETER_SIGNATURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "4c8bfa8951e99fa32e4000a94f8c04a2"
-		},
-		{
-			"name" : "_Python_LIBRARY_RELEASE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpython3.10.so"
-		},
-		{
-			"name" : "_Python_NumPy_REASON_FAILURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "NumPy reason failure"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ""
-		},
-		{
-			"name" : "pybind11_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for pybind11."
-				}
-			],
-			"type" : "PATH",
-			"value" : "/home/emil/.local/lib/python3.10/site-packages/pybind11/share/cmake/pybind11"
-		},
-		{
-			"name" : "pybind11_INCLUDE_DIRS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Directories where pybind11 and possibly Python headers are located"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "/home/emil/.local/lib/python3.10/site-packages/pybind11/include;/usr/include/python3.10"
 		}
 	],
 	"kind" : "cache",

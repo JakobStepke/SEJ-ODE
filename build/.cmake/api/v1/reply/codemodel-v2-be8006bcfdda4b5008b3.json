@@ -57,7 +57,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "test_ode::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test_ode-Debug-3eb26919e4132d1800e0.json",
+					"jsonFile" : "target-test_ode-Debug-ea0d39131699b94a7ced.json",
 					"name" : "test_ode",
 					"projectIndex" : 0
 				}
@@ -67,12 +67,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build",
-		"source" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE"
+		"build" : "/mnt/c/Users/e12209452/Documents/Uni/ScientificComputing/SEJ-ODE/build",
+		"source" : "/mnt/c/Users/e12209452/Documents/Uni/ScientificComputing/SEJ-ODE"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 3
 	}
 }

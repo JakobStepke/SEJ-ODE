@@ -19,9 +19,13 @@ class MassSpring : public NonlinearFunction
   void EvaluateDeriv (VectorView<double> x, MatrixView<double> df) const override
   {
     cout << "EvaluateDeriv" << endl;
+    cout << "df = " << endl << df << endl;
+
     df *= 0.0;
     df(0,1) = 1;
     df(1,0) = -1;
+
+    cout << "df = " << endl << df << endl;
   }
 };
 
@@ -38,4 +42,9 @@ int main()
   
   SolveODE_IE(tend, steps, y, rhs,
               [](double t, VectorView<double> y) { cout << t << "  " << y(0) << " " << y(1) << endl; });
+
+  cout << "y = " << y << endl;
+
+  // Exiting this method throws a double free error. I have no idea why, free() is never used.
+  return 0;
 }

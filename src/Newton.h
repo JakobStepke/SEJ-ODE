@@ -19,12 +19,17 @@ namespace ASC_ode
         func->Evaluate(x, res);
         cout << "res = " << endl << res << endl;
         // cout << "|res| = " << L2Norm(res) << endl;
+        fprime *= 0;
+        cout << "fprime = " << endl << fprime << endl;
         func->EvaluateDeriv(x, fprime);
         cout << "fprime = " << endl << fprime << endl;
-        cout << "fprime^-1 = " << endl << Matrix(InverseLapack(fprime)) << endl;
-        cout << "fprime^-1*fprime = " << endl << Matrix(Matrix(fprime*InverseLapack(fprime))) << endl;
+        //cout << "fprime^-1 = " << endl << Matrix(InverseLapack(fprime)) << endl;
+        //cout << "fprime^-1*fprime = " << endl << Matrix(Matrix(fprime*InverseLapack(fprime))) << endl;
         fprime = Matrix(InverseLapack(fprime));
+        cout << "fprime = " << endl << fprime << endl;
         x -= fprime*res;
+        cout << "frprime*res = " << endl << fprime*res << endl;
+        cout << "x = " << endl << x << endl;
 
         double err= res.Norm2();
         if (callback)
