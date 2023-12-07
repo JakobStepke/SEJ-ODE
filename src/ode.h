@@ -15,6 +15,8 @@ namespace ASC_ode
                    VectorView<double> y, shared_ptr<NonlinearFunction> rhs,
                    std::function<void(double,VectorView<double>)> callback = nullptr)
   {
+    cout << "SolveODE_IE" << endl;
+
     double dt = tend/steps;
     auto yold = make_shared<ConstantFunction>(y);
     auto ynew = make_shared<IdentityFunction>(y.Size());
@@ -25,13 +27,16 @@ namespace ASC_ode
     double t = 0;
     for (int i = 0; i < steps; i++)
       {
-        cout << "IE step " << i << endl;
+        // cout << "IE step " << i << endl;
         NewtonSolver (equ, y);
+
+        // cout << "y = " << y << endl;
+
         yold->Set(y);
         t += dt;
         if (callback) callback(t, y);
       }
-      cout << "End IE" << endl;
+      // cout << "End IE" << endl;
   }
 
   

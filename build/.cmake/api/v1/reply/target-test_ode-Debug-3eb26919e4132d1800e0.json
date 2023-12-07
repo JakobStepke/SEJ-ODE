@@ -55,18 +55,18 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -std=gnu++17"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/mnt/c/Users/e12209452/Documents/Uni/ScientificComputing/SEJ-ODE/src"
+					"path" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/src"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/mnt/c/Users/e12209452/Documents/Uni/ScientificComputing/SEJ-ODE/ESJ-bla/src"
+					"path" : "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/ESJ-bla/src"
 				}
 			],
 			"language" : "CXX",

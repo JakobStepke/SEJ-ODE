@@ -18,14 +18,15 @@ class MassSpring : public NonlinearFunction
   
   void EvaluateDeriv (VectorView<double> x, MatrixView<double> df) const override
   {
-    cout << "EvaluateDeriv" << endl;
-    cout << "df = " << endl << df << endl;
-
-    df *= 0.0;
+    // cout << "EvaluateDeriv" << endl;
+    // cout << "df = " << endl << df << endl;
     df(0,1) = 1;
     df(1,0) = -1;
 
-    cout << "df = " << endl << df << endl;
+    df(0, 0) = 0;
+    df(1, 1) = 0;
+
+    // cout << "df = " << endl << df << endl;
   }
 };
 
