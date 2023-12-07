@@ -39,7 +39,25 @@ namespace ASC_ode
       // cout << "End IE" << endl;
   }
 
-  
+  void SolveODE_CrankNicolson(double tend, int steps,
+                              VectorView<double> y, shared_ptr<NonlinearFunction> f,
+                              std::function<void(double,VectorView<double>)> callback = nullptr)
+  {
+    double dt = tend/steps;
+    auto yold = make_shared<ConstantFunction>(y);
+    auto ynew = make_shared<IdentityFunction>(y.Size());
+    auto equ = ynew-yold - dt/2 *(Compose(f, ynew) + Compose(f, yold));
+
+    double t = 0;
+    for (int i = 0; i < steps; i++)
+      {
+        NewtonSolver (equ, y);
+
+        yold->Set(y);
+        t += dt;
+        if (callback) callback(t, y);
+      }
+  } 
 
   
   
@@ -137,6 +155,8 @@ namespace ASC_ode
     dx = v;
     ddx = a;
   }
+
+  
 
   
 

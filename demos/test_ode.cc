@@ -41,8 +41,18 @@ int main()
   auto rhs = make_shared<MassSpring>();
   cout << "rhs = " << rhs << endl;
   
+
+  cout << "SolveODE_IE" << endl;
   SolveODE_IE(tend, steps, y, rhs,
               [](double t, VectorView<double> y) { cout << t << "  " << y(0) << " " << y(1) << endl; });
+
+  cout << "y = " << y << endl;
+
+
+  Vector<> y_CR { 1, 0 };
+  cout << "SolveODE_CrankNicolson" << endl;
+  SolveODE_CrankNicolson(tend, steps, y_CR, rhs,
+                         [](double t, VectorView<double> y_CR) { cout << t << "," << y_CR(0) << "," << y_CR(1) << endl; });
 
   cout << "y = " << y << endl;
 
