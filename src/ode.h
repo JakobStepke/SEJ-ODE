@@ -39,6 +39,38 @@ namespace ASC_ode
       // cout << "End IE" << endl;
   }
 
+    // explicit Euler method for dy/dt = rhs(y)
+  void SolveODE_EE(double tend, int steps,
+                   VectorView<double> y, shared_ptr<NonlinearFunction> f,
+                   std::function<void(double,VectorView<double>)> callback = nullptr)
+  {
+    double dt = tend / steps;
+    auto yold = Vector<>(y.Size());
+    auto ynew = Vector<>(y.Size());
+
+    yold = y;
+    ynew = y;
+
+    double t = 0;
+    for (int i = 0; i < steps; i++)
+      {
+        // std::cout << "EE step " << i << std::endl;
+        // std::cout << "yold = " << yold << std::endl;
+        // std::cout << "ynew = " << ynew << std::endl;
+        f->Evaluate(yold, ynew);
+        ynew *= dt;
+        ynew += yold;
+        yold = ynew;
+        t += dt;
+        if (callback)
+        {
+          callback(t, ynew);
+        }
+      }
+
+    y = ynew;
+  }
+
   void SolveODE_CrankNicolson(double tend, int steps,
                               VectorView<double> y, shared_ptr<NonlinearFunction> f,
                               std::function<void(double,VectorView<double>)> callback = nullptr)
