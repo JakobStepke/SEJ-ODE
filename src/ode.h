@@ -15,6 +15,8 @@ namespace ASC_ode
                    VectorView<double> y, shared_ptr<NonlinearFunction> rhs,
                    std::function<void(double,VectorView<double>)> callback = nullptr)
   {
+    cout << "SolveODE_IE" << endl;
+
     double dt = tend/steps;
     auto yold = make_shared<ConstantFunction>(y);
     auto ynew = make_shared<IdentityFunction>(y.Size());
@@ -25,14 +27,69 @@ namespace ASC_ode
     double t = 0;
     for (int i = 0; i < steps; i++)
       {
+        // cout << "IE step " << i << endl;
         NewtonSolver (equ, y);
+
+        // cout << "y = " << y << endl;
+
         yold->Set(y);
         t += dt;
         if (callback) callback(t, y);
       }
+      // cout << "End IE" << endl;
   }
 
-  
+    // explicit Euler method for dy/dt = rhs(y)
+  void SolveODE_EE(double tend, int steps,
+                   VectorView<double> y, shared_ptr<NonlinearFunction> f,
+                   std::function<void(double,VectorView<double>)> callback = nullptr)
+  {
+    double dt = tend / steps;
+    auto yold = Vector<>(y.Size());
+    auto ynew = Vector<>(y.Size());
+
+    yold = y;
+    ynew = y;
+
+    double t = 0;
+    for (int i = 0; i < steps; i++)
+      {
+        // std::cout << "EE step " << i << std::endl;
+        // std::cout << "yold = " << yold << std::endl;
+        // std::cout << "ynew = " << ynew << std::endl;
+        f->Evaluate(yold, ynew);
+        ynew *= dt;
+        ynew += yold;
+        yold = ynew;
+        t += dt;
+        if (callback)
+        {
+          callback(t, ynew);
+        }
+      }
+
+    y = ynew;
+  }
+
+  void SolveODE_CrankNicolson(double tend, int steps,
+                              VectorView<double> y, shared_ptr<NonlinearFunction> f,
+                              std::function<void(double,VectorView<double>)> callback = nullptr)
+  {
+    double dt = tend/steps;
+    auto yold = make_shared<ConstantFunction>(y);
+    auto ynew = make_shared<IdentityFunction>(y.Size());
+    auto equ = ynew-yold - dt/2 *(Compose(f, ynew) + Compose(f, yold));
+
+    double t = 0;
+    for (int i = 0; i < steps; i++)
+      {
+        NewtonSolver (equ, y);
+
+        yold->Set(y);
+        t += dt;
+        if (callback) callback(t, y);
+      }
+  } 
 
   
   
@@ -130,6 +187,8 @@ namespace ASC_ode
     dx = v;
     ddx = a;
   }
+
+  
 
   
 

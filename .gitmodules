@@ -1,4 +1,8 @@
-[submodule "esj-bla"]
+[submodule "bla"]
 	path = bla
-        url = https://github.com/JakobStepke/ESJ-bla.git
+	url = https://github.com/JakobStepke/ESJ-bla.git
 
+
+[submodule "ESJ-bla"]
+	path = ESJ-bla
+	url = https://github.com/JakobStepke/ESJ-bla.git

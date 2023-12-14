@@ -14,7 +14,8 @@ class RHS : public NonlinearFunction
   }
   void EvaluateDeriv (VectorView<double> x, MatrixView<double> df) const override
   {
-    df(0) = -1;
+    df(0, 0) = -1.0;
+    // cout << "df = " << endl << df << endl;
   }
 };
 

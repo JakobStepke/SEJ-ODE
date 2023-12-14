@@ -1,4 +1,6 @@
 /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/CMakeFiles/test_ode.dir
+/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/CMakeFiles/test_newmark.dir
+/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/CMakeFiles/test_alpha.dir
 /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/CMakeFiles/edit_cache.dir
 /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/CMakeFiles/rebuild_cache.dir
 /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/CMakeFiles/list_install_components.dir
