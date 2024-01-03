@@ -68,6 +68,10 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "semaphore": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "valarray": "cpp"
     }
 }

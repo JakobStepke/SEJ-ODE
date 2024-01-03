@@ -34,3 +34,10 @@
 # Build folder
 build/
 build/*
+.vscode/settings.json
+build/cmake_install.cmake
+build/CMakeCache.txt
+build/compile_commands.json
+build/test_ode
+build/CMakeFiles/TargetDirectories.txt
+build/src/cmake_install.cmake

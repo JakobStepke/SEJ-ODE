@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/src
+# Install script for directory: /mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,9 +44,9 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/src/nonlinfunc.h"
-    "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/src/Newton.h"
-    "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/src/ode.h"
+    "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src/nonlinfunc.h"
+    "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src/Newton.h"
+    "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src/ode.h"
     )
 endif()
 

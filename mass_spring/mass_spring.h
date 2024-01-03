@@ -8,7 +8,10 @@
 
 using namespace ASC_ode;
 
+#include <forward_decl.h>
+
 #include <vector.h>
+#include <matrix.h>
 using namespace ASC_HPC;
 
 
@@ -151,10 +154,14 @@ public:
   
   virtual void Evaluate (VectorView<double> x, VectorView<double> f) const
   {
+    // cout << "Evaluate: x = " << x << endl;
     f = 0.0;
     
     auto xmat = x.AsMatrix(mss.Masses().size(), D);
     auto fmat = f.AsMatrix(mss.Masses().size(), D);
+
+    // cout << "xmat = " << xmat << endl;
+    // cout << "fmat = " << fmat << endl;
     
     for (size_t i = 0; i < mss.Masses().size(); i++)
       fmat.Row(i) = mss.Masses()[i].mass*mss.Gravity();
@@ -162,6 +169,8 @@ public:
     for (auto spring : mss.Springs())
       {
         auto [c1,c2] = spring.connections;
+        // cout << "c1 = " << c1 << endl;
+        // cout << "c2 = " << c2 << endl;
         Vec<D> p1, p2;
         if (c1.type == Connector::FIX)
           p1 = mss.Fixes()[c1.nr].pos;
@@ -172,7 +181,15 @@ public:
         else
           p2 = xmat.Row(c2.nr);
 
-        double force = spring.stiffness * (L2Norm(p1-p2)-spring.length);
+        // cout << "p1 = " << p1 << endl;
+        // cout << "p2 = " << p2 << endl;
+
+        auto p1minusp2 = p1-p2;
+        // cout << "p1minusp2 = " << p1minusp2 << endl;
+        // Er rechnet hier irgendwie nicht mehr mit dem eigentlichen p1minusp2, sondern mit IRGENDWELCHEN WERTEN, sobald die methode L2Norm aufgerufen wird, warum???????
+        // cout << "L2Norm(p1-p2) = " << L2Norm(p1minusp2) << endl;
+
+        double force = spring.stiffness * L2Norm(p1-p2)-spring.length;
         Vec<D> dir12 = 1.0/L2Norm(p1-p2) * (p2-p1);
         if (c1.type == Connector::MASS)
           fmat.Row(c1.nr) += force*dir12;

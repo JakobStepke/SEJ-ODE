@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE
+# Install script for directory: /mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/src/cmake_install.cmake")
+  include("/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/build/src/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/build/mass_spring/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
