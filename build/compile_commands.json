@@ -1,20 +1,32 @@
 [
 {
-  "directory": "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build",
-  "command": "/usr/bin/g++ -I/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/src -I/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/ESJ-bla/src -g -std=gnu++17 -o CMakeFiles/test_ode.dir/demos/test_ode.cc.o -c /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/demos/test_ode.cc",
-  "file": "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/demos/test_ode.cc",
+  "directory": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/build",
+  "command": "/usr/bin/g++  -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src\" -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/ESJ-bla/src\" -g -std=gnu++17 -o CMakeFiles/test_ode.dir/demos/test_ode.cc.o -c \"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/demos/test_ode.cc\"",
+  "file": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/demos/test_ode.cc",
   "output": "CMakeFiles/test_ode.dir/demos/test_ode.cc.o"
 },
 {
-  "directory": "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build",
-  "command": "/usr/bin/g++ -I/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/src -I/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/ESJ-bla/src -g -std=gnu++17 -o CMakeFiles/test_newmark.dir/demos/test_newmark.cc.o -c /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/demos/test_newmark.cc",
-  "file": "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/demos/test_newmark.cc",
+  "directory": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/build",
+  "command": "/usr/bin/g++  -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src\" -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/ESJ-bla/src\" -g -std=gnu++17 -o CMakeFiles/test_newmark.dir/demos/test_newmark.cc.o -c \"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/demos/test_newmark.cc\"",
+  "file": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/demos/test_newmark.cc",
   "output": "CMakeFiles/test_newmark.dir/demos/test_newmark.cc.o"
 },
 {
-  "directory": "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/build",
-  "command": "/usr/bin/g++ -I/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/src -I/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/ESJ-bla/src -g -std=gnu++17 -o CMakeFiles/test_alpha.dir/demos/test_alpha.cc.o -c /mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/demos/test_alpha.cc",
-  "file": "/mnt/c/Users/Emil/Desktop/Uni/IntroSci/SEJ-ODE/demos/test_alpha.cc",
+  "directory": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/build",
+  "command": "/usr/bin/g++  -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src\" -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/ESJ-bla/src\" -g -std=gnu++17 -o CMakeFiles/test_alpha.dir/demos/test_alpha.cc.o -c \"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/demos/test_alpha.cc\"",
+  "file": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/demos/test_alpha.cc",
   "output": "CMakeFiles/test_alpha.dir/demos/test_alpha.cc.o"
+},
+{
+  "directory": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/build/mass_spring",
+  "command": "/usr/bin/g++  -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src\" -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/ESJ-bla/src\" -g -std=gnu++17 -o CMakeFiles/test_mass_spring.dir/mass_spring.cc.o -c \"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/mass_spring/mass_spring.cc\"",
+  "file": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/mass_spring/mass_spring.cc",
+  "output": "mass_spring/CMakeFiles/test_mass_spring.dir/mass_spring.cc.o"
+},
+{
+  "directory": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/build/mass_spring",
+  "command": "/usr/bin/g++ -Dmass_spring_EXPORTS -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/src\" -I\"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/ESJ-bla/src\" -isystem /usr/include/python3.10 -isystem /home/emil/.local/lib/python3.10/site-packages/pybind11/include -g -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/mass_spring.dir/bind_mass_spring.cc.o -c \"/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/mass_spring/bind_mass_spring.cc\"",
+  "file": "/mnt/c/Users/Emil Pobinger/Documents/Uni/SEJ-ODE/mass_spring/bind_mass_spring.cc",
+  "output": "mass_spring/CMakeFiles/mass_spring.dir/bind_mass_spring.cc.o"
 }
 ]
