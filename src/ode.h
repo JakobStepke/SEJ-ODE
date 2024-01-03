@@ -104,7 +104,7 @@ namespace ASC_ode
                         shared_ptr<NonlinearFunction> mass,  
                         std::function<void(double,VectorView<double>)> callback = nullptr)
   {
-    cout << "SolveODE_Newmark" << endl;
+    // cout << "SolveODE_Newmark" << endl;
     double dt = tend/steps;
     double gamma = 0.5;
     double beta = 0.25;
@@ -112,17 +112,17 @@ namespace ASC_ode
     Vector<> a(x.Size());
     Vector<> v(x.Size());
 
-    cout << "Init vectors" << endl;
+    // cout << "Init vectors" << endl;
 
     auto xold = make_shared<ConstantFunction>(x);
-    cout << "Init xold" << endl;
+    // cout << "Init xold" << endl;
     auto vold = make_shared<ConstantFunction>(dx);
-    cout << "Init vold" << endl;
+    // cout << "Init vold" << endl;
     auto aold = make_shared<ConstantFunction>(x);
-    cout << "Init aold" << endl;
+    // cout << "Init aold" << endl;
     rhs->Evaluate (xold->Get(), aold->Get());
 
-    cout << "Init functions" << endl;
+    // cout << "Init functions" << endl;
     
     auto anew = make_shared<IdentityFunction>(a.Size());
     auto vnew = vold + dt*((1-gamma)*aold+gamma*anew);
